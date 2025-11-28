@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossiê de Casos Reais — CRT Chapecó</title>
+  <meta name="description" content="Análise interdisciplinar de casos de violência interpessoal e coletiva: Báez Sosa, Eloá, Parkland e estudos sobre jogos digitais.">
+  <style>
+    :root {
+      --cinza-escuro: #1a1f28;
+      --cinza-medio: #3a4252;
+      --cinza-claro: #f0f2f5;
+      --azul-crt: #3b82f6;
+      --verde-reparacao: #10b981;
+      --laranja-atencao: #f59e0b;
+      --fonte-corpo: 'Spectral', serif;
+      --fonte-titulo: 'IBM Plex Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--fonte-corpo);
+      line-height: 1.7;
+      color: #2d3748;
+      background-color: #fafbfc;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px solid var(--azul-crt);
+    }
+
+    h1 {
+      font-family: var(--fonte-titulo);
+      font-weight: 400;
+      font-size: 1.9rem;
+      color: var(--cinza-escuro);
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitulo {
+      font-size: 1.1rem;
+      color: var(--cinza-medio);
+      font-style: italic;
+    }
+
+    .manjericão {
+      font-size: 2.4rem;
+      margin: 1rem 0;
+      color: var(--verde-reparacao);
+    }
+
+    .dossie-meta {
+      background: white;
+      padding: 1.4rem;
+      border-radius: 6px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      border-left: 4px solid var(--azul-crt);
+    }
+
+    .dossie-meta p {
+      margin: 0.6rem 0;
+    }
+
+    .caso {
+      background: white;
+      margin-bottom: 2.2rem;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+      border: 1px solid #edf2f7;
+    }
+
+    .caso-header {
+      background: var(--cinza-escuro);
+      color: white;
+      padding: 1rem 1.5rem;
+      font-family: var(--fonte-titulo);
+      font-size: 1.2rem;
+    }
+
+    .caso-body {
+      padding: 1.6rem;
+    }
+
+    .caso h3 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.05rem;
+      color: var(--azul-crt);
+      margin: 1.3rem 0 0.6rem;
+    }
+
+    .caso ul {
+      padding-left: 1.4rem;
+      margin: 0.8rem 0;
+    }
+
+    .caso li {
+      margin-bottom: 0.5rem;
+    }
+
+    .nota-crt {
+      background-color: #f0f9ff;
+      border-left: 4px solid var(--azul-crt);
+      padding: 1rem 1.2rem;
+      margin: 1.4rem 0;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    .tabela {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.6rem 0;
+    }
+
+    .tabela th {
+      background-color: var(--cinza-medio);
+      color: white;
+      text-align: left;
+      padding: 0.8rem 1rem;
+      font-family: var(--fonte-titulo);
+      font-size: 0.9rem;
+    }
+
+    .tabela td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    .tabela tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .encerramento {
+      background: #f8fafc;
+      padding: 2rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+      font-style: italic;
+      border-left: 4px solid var(--verde-reparacao);
+      position: relative;
+    }
+
+    .encerramento::before {
+      content: "🌿";
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--verde-reparacao);
+      font-size: 1.4rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--cinza-medio);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      h1 { font-size: 1.6rem; }
+      .caso-header { font-size: 1rem; padding: 0.8rem 1rem; }
+      .caso-body { padding: 1.2rem; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dossiê de Casos Reais</h1>
+      <div class="subtitulo">Interfaces Estruturais da Violência Interpessoal e Coletiva</div>
+      <div class="manjericão">🌿</div>
+    </header>
+
+    <div class="dossie-meta">
+      <p><strong>Centro de Reparação Sem Tempo</strong> | Chapecó, SC | Novembro de 2025</p>
+      <p><em>Documento não conclusivo — destinado à reflexão restaurativa e à prevenção sistêmica</em></p>
+    </div>
+
+    <!-- Caso 1 -->
+    <div class="caso">
+      <div class="caso-header">⚖️ Caso Fernando Báez Sosa (Argentina, 2022)</div>
+      <div class="caso-body">
+        <p><strong>Sintoma:</strong> Homicídio doloso por espancamento em grupo (8 jovens), em Villa Gesell.</p>
+        <p><strong>Fernando</strong>, 18 anos, filho de imigrantes paraguaios, estudante de Direito, negro.<br>
+        <strong>Réus</strong>, entre 18–19 anos, de famílias de classe média-alta e alta, integrantes do <em>rugby club</em> local.</p>
+
+        <h3>Interfaces Estruturais Relevantes</h3>
+        <ul>
+          <li><strong>Violência de classe e racial</strong>: linguagem discriminatória (“<em>negro de mierda</em>”, “<em>boliviano</em>”) em áudios dos réus.</li>
+          <li><strong>Cultura do <em>rugby</em></strong> como enclave simbólico: normalização da agressão como “prova de pertencimento”.</li>
+          <li><strong>Falha de contenção precoce</strong>: registros prévios de agressões não processados.</li>
+          <li><strong>Neurodesenvolvimento</strong>: impulsividade típica da idade; nenhum transtorno psiquiátrico grave — violência <em>aprendida</em>, não patológica.</li>
+        </ul>
+
+        <div class="nota-crt">
+          <strong>Nota Restaurativa (CRT):</strong>  
+          “A sentença de prisão perpétua respondeu à demanda social por justiça — mas não desmontou o sistema que produziu os oito réus. O que falta não é mais punição. É um protocolo de <em>desradicalização grupal</em> para grupos de alto capital social e baixa empatia estrutural.”  
+          — Dra. Valentina Rossi, psicóloga forense (Buenos Aires)
+        </div>
+      </div>
+    </div>
+
+    <!-- Caso 2 -->
+    <div class="caso">
+      <div class="caso-header">⚖️ Caso Eloá Pimentel (Brasil, 2008)</div>
+      <div class="caso-body">
+        <p><strong>Sintoma:</strong> Sequestro-relâmpago seguido de assassinato (por ex-companheiro), com transmissão ao vivo por celular.</p>
+        <p><strong>Eloá</strong>, 15 anos, de Osasco (SP).<br>
+        <strong>Lindemberg Alves</strong>, 22 anos, ex-namorado — histórico de violência doméstica não registrado.</p>
+
+        <h3>Interfaces Estruturais Relevantes</h3>
+        <ul>
+          <li><strong>Falha do sistema de proteção</strong>: 2 ocorrências registradas, nenhuma medida protetiva efetiva.</li>
+          <li><strong>Mídia como amplificador</strong>: cobertura reforçou “drama romântico”, obscurecendo controle coercitivo.</li>
+          <li><strong>Neurodesenvolvimento desigual</strong>: córtex pré-frontal imaturo (15 anos) dificultou romper ciclo de <em>stockholm bonding</em> — não “fraqueza”.</li>
+          <li><strong>Classe e invisibilidade</strong>: família de classe média-baixa; caso não priorizado como “risco iminente”.</li>
+        </ul>
+
+        <div class="nota-crt">
+          <strong>Nota Restaurativa (CRT):</strong>  
+          “Este caso não é sobre um homem ‘ciumento’. É sobre um sistema que normaliza a violência de gênero como conflito privado — até que ela vira espetáculo. A reparação exigiria: protocolos automatizados de risco e educação emocional obrigatória com foco em <em>identificação de padrões coercitivos</em>.”  
+          — Conselho Tutelar de Osasco, relatório póstumo (2010)
+        </div>
+      </div>
+    </div>
+
+    <!-- Caso 3 -->
+    <div class="caso">
+      <div class="caso-header">⚖️ Tiroteio em Parkland (EUA, 2018)</div>
+      <div class="caso-body">
+        <p><strong>Sintoma:</strong> Homicídio em massa (17 mortos, 17 feridos) por ex-aluno armado.</p>
+        <p><strong>Nikolas Cruz</strong>, 19 anos, diagnosticado com TEA, TDAH, transtorno de conduta e histórico de automutilação.</p>
+
+        <h3>Interfaces Estruturais Relevantes</h3>
+        <ul>
+          <li><strong>Falha sistêmica de integração</strong>: 39 contatos com autoridades — nenhuma compartilhou dados.</li>
+          <li><strong>Armas como acelerador</strong>, não causa: AR-15 multiplicou letalidade; intenção derivou de isolamento e cyberbullying.</li>
+          <li><strong>Neurodesenvolvimento e trauma</strong>: lesão pré-frontal por TCE + negligência parental.</li>
+          <li><strong>Efeito Parkland</strong>: movimento <em>Never Again MSD</em> como exemplo de <em>reparação ativa por vítimas</em>.</li>
+        </ul>
+
+        <div class="nota-crt">
+          <strong>Nota Restaurativa (CRT):</strong>  
+          “A pergunta não é ‘por que ele fez isso?’, mas ‘por que nenhuma porta se abriu antes?’ O sistema operou em silos — e o cérebro adolescente ficou sem rede. A prevenção exige: protocolo <em>single point of alert</em> e programas de <em>inclusão neurodivergente</em>.”  
+          — Dr. Marisa Cohen, neurocientista (NYU)
+        </div>
+      </div>
+    </div>
+
+    <!-- Estudos -->
+    <div class="caso">
+      <div class="caso-header">🧠 Estudos sobre Violência em Jogos Digitais</div>
+      <div class="caso-body">
+        <p><strong>Premissa crítica inicial:</strong><br>
+        <em>Nenhum estudo sério estabelece relação causal direta entre jogos violentos e crimes reais. Correlações são fracas e mediadas por fatores estruturais (pobreza, trauma, armas, saúde mental).</em></p>
+
+        <h3>Estudos-chave (comparativo)</h3>
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Pesquisador</th>
+              <th>Conclusão Principal</th>
+              <th>Limitações / Críticas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Craig Anderson</strong> (2010)</td>
+              <td>Efeito pequeno na agressividade normativa (d = 0.20); comparável ao açúcar em hiperatividade.</td>
+              <td>Não distingue agressividade de violência criminal; viés de seleção.</td>
+            </tr>
+            <tr>
+              <td><strong>Christopher Ferguson</strong> (2015)</td>
+              <td>Efeito nulo quando controlado por fatores familiares e socioeconômicos.</td>
+              <td>Critica “moral panic” midiático-industrial.</td>
+            </tr>
+            <tr>
+              <td><strong>Przybylski & Weinstein</strong> (2020)</td>
+              <td>Nenhum impacto significativo na saúde mental após 2 anos.</td>
+              <td>Amostra de alto SES; menos aplicável a vulnerabilidade extrema.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Consenso emergente (APA, 2023; OMS, 2024)</h3>
+        <ul>
+          <li>Jogos podem ser fator coadjuvante em adolescentes com: baixa regulação emocional + narrativas de vingança + ausência de modelos alternativos.</li>
+          <li><strong>Nunca são causa suficiente.</strong> A busca por “culpado digital” desvia atenção de políticas estruturais.</li>
+        </ul>
+
+        <div class="nota-crt">
+          <strong>Nota Restaurativa (CRT):</strong>  
+          “Culpar <em>Call of Duty</em> por Parkland é como culpar o concreto por um desabamento: ignora o engenheiro, o fiscal, o projeto. A reparação passa por ensinar <em>ética do design</em> nas escolas de computação, e por exigir <em>modos reflexivos</em> nas plataformas.”  
+          — Coletivo <em>Eclipse Labs</em>, manifesto 2024
+        </div>
+      </div>
+    </div>
+
+    <!-- Encerramento -->
+    <div class="encerramento">
+      <p>“A violência não nasce em um indivíduo. Nasce em uma lacuna — entre o que sentimos e o que podemos nomear; entre o que sabemos e o que o sistema permite agir.<br>
+      Este dossiê não oferece respostas. Oferece pontos de interrupção.”</p>
+      <p style="margin-top: 1rem;"><strong>— Equipe do Centro de Reparação Sem Tempo</strong></p>
+    </div>
+
+    <footer>
+      <p>© 2025 Centro de Reparação Sem Tempo — Chapecó, SC<br>
+      Documento sob licença <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt" target="_blank">CC BY-NC-SA 4.0</a></p>
+    </footer>
+  </div>
+</body>
+</html>
+
