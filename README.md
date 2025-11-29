@@ -5,7 +5,7 @@
 
 ---
 
-🌍 **Acesso público**: [https://erigutembergmeneses-jpg.github.io/dossie-casos-reais](https://erigutebergmeneses-jpg.github.io/dossie-casos-reais)  
+🌍 **Acesso público**: [https://erigutembergmeneses-jpg/dossie-casos-reais](https://erigutebergmeneses-jpg/dossie-casos-reais)  
 *(Substitua `seu-usuario` pelo seu nome de usuário no GitHub após ativar o GitHub Pages.)*
 
 ---
