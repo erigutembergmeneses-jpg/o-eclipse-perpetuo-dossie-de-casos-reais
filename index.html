@@ -3,327 +3,423 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dossiê de Casos Reais — CRT</title>
-  <meta name="description" content="Análise interdisciplinar de casos de violência interpessoal e coletiva: Báez Sosa, Eloá, Parkland e estudos sobre jogos digitais.">
+  <title>Dossiê de Casos Reais — Violência Simulada, Colapso Ético e a Falha da Contenção</title>
+  <meta name="description" content="Análise interdisciplinar de casos reais e especulativos sobre violência digital, neuroética e justiça restaurativa. Atualizado em 29 de novembro de 2025.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,300;0,8..144,400;0,8..144,600;1,8..144,400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cinza-escuro: #1a1f28;
-      --cinza-medio: #3a4252;
-      --cinza-claro: #f0f2f5;
-      --azul-crt: #3b82f6;
-      --verde-reparacao: #10b981;
-      --laranja-atencao: #f59e0b;
-      --fonte-corpo: 'Spectral', serif;
-      --fonte-titulo: 'IBM Plex Mono', monospace;
+      --text: #2d3748;
+      --text-light: #4a5568;
+      --text-muted: #718096;
+      --bg: #ffffff;
+      --bg-subtle: #f8fafc;
+      --accent: #c53030;
+      --accent-light: #feb2b2;
+      --border: #e2e8f0;
+      --code-bg: #edf2f7;
+      --quote-border: #cbd5e0;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      font-family: var(--fonte-corpo);
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
       line-height: 1.7;
-      color: #2d3748;
-      background-color: #fafbfc;
+      font-size: 1.02rem;
       padding: 2rem 1rem;
-    }
-
-    .container {
-      max-width: 900px;
+      max-width: 80ch;
       margin: 0 auto;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      padding-bottom: 1.2rem;
-      border-bottom: 2px solid var(--azul-crt);
+    @media (max-width: 600px) {
+      body { font-size: 0.95rem; padding: 1.5rem 0.8rem; }
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Roboto Serif', serif;
+      font-weight: 600;
+      margin-top: 2.2rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
     }
 
     h1 {
-      font-family: var(--fonte-titulo);
-      font-weight: 400;
-      font-size: 1.9rem;
-      color: var(--cinza-escuro);
-      margin-bottom: 0.4rem;
+      font-size: 2.2rem;
+      color: var(--text);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.6rem;
     }
 
-    .subtitulo {
+    h2 {
+      font-size: 1.6rem;
+      color: var(--accent);
+      margin-top: 3rem;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      color: var(--text);
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      margin-top: 1.8rem;
+      color: var(--text);
+    }
+
+    p, ul, ol {
+      margin-bottom: 1.2rem;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    blockquote {
+      background-color: var(--bg-subtle);
+      border-left: 4px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0;
+      font-family: 'Roboto Serif', serif;
+      font-style: italic;
       font-size: 1.1rem;
-      color: var(--cinza-medio);
-      font-style: italic;
+      color: var(--text);
+      border-radius: 0 4px 4px 0;
     }
 
-    .manjericão {
-      font-size: 2.4rem;
-      margin: 1rem 0;
-      color: var(--verde-reparacao);
+    blockquote::before {
+      content: "“";
+      font-size: 2rem;
+      opacity: 0.3;
+      line-height: 0;
+      position: relative;
+      top: 0.5rem;
     }
 
-    .dossie-meta {
-      background: white;
-      padding: 1.4rem;
-      border-radius: 6px;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-      border-left: 4px solid var(--azul-crt);
+    blockquote::after {
+      content: "”";
+      font-size: 2rem;
+      opacity: 0.3;
+      line-height: 0;
+      position: relative;
+      top: 0.3rem;
+      left: 0.3rem;
     }
 
-    .dossie-meta p {
-      margin: 0.6rem 0;
-    }
-
-    .caso {
-      background: white;
-      margin-bottom: 2.2rem;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-      border: 1px solid #edf2f7;
-    }
-
-    .caso-header {
-      background: var(--cinza-escuro);
-      color: white;
-      padding: 1rem 1.5rem;
-      font-family: var(--fonte-titulo);
-      font-size: 1.2rem;
-    }
-
-    .caso-body {
-      padding: 1.6rem;
-    }
-
-    .caso h3 {
-      font-family: var(--fonte-titulo);
-      font-size: 1.05rem;
-      color: var(--azul-crt);
-      margin: 1.3rem 0 0.6rem;
-    }
-
-    .caso ul {
-      padding-left: 1.4rem;
-      margin: 0.8rem 0;
-    }
-
-    .caso li {
-      margin-bottom: 0.5rem;
-    }
-
-    .nota-crt {
-      background-color: #f0f9ff;
-      border-left: 4px solid var(--azul-crt);
-      padding: 1rem 1.2rem;
-      margin: 1.4rem 0;
-      font-style: italic;
+    .epigraph {
+      text-align: right;
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 0.5rem;
+      color: var(--text-muted);
       font-size: 0.95rem;
     }
 
-    .tabela {
+    .highlight {
+      background-color: var(--accent-light);
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+    }
+
+    .callout {
+      background-color: #fff8e6;
+      border-left: 4px solid #d69e2e;
+      padding: 1rem 1.4rem;
+      margin: 2rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .case {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    .case:first-of-type {
+      border-top: none;
+      margin-top: 1.5rem;
+    }
+
+    .case-title {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .case-title::before {
+      content: "🔹";
+      font-size: 1.1rem;
+    }
+
+    table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1.6rem 0;
+      margin: 2rem 0;
+      font-size: 0.95rem;
     }
 
-    .tabela th {
-      background-color: var(--cinza-medio);
-      color: white;
-      text-align: left;
+    th, td {
       padding: 0.8rem 1rem;
-      font-family: var(--fonte-titulo);
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: var(--bg-subtle);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafbfd;
+    }
+
+    tr:hover td {
+      background-color: #f0f4f8;
+    }
+
+    .check::before {
+      content: "✅";
+      color: #38a169;
+    }
+
+    .warn::before {
+      content: "⚠️";
+      color: #d69e2e;
+    }
+
+    .ref {
+      font-family: 'Roboto', monospace;
+      background: var(--code-bg);
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
       font-size: 0.9rem;
     }
 
-    .tabela td {
-      padding: 0.9rem 1rem;
-      border-bottom: 1px solid #e2e8f0;
-      vertical-align: top;
+    .footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
     }
 
-    .tabela tr:nth-child(even) {
-      background-color: #f8fafc;
-    }
-
-    .encerramento {
-      background: #f8fafc;
-      padding: 2rem;
-      border-radius: 6px;
-      margin-top: 2rem;
+    .signature {
       font-style: italic;
-      border-left: 4px solid var(--verde-reparacao);
-      position: relative;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
     }
 
-    .encerramento::before {
-      content: "🌿";
-      position: absolute;
-      left: -12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--verde-reparacao);
-      font-size: 1.4rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      color: var(--cinza-medio);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      body { padding: 1rem; }
-      h1 { font-size: 1.6rem; }
-      .caso-header { font-size: 1rem; padding: 0.8rem 1rem; }
-      .caso-body { padding: 1.2rem; }
+    .note {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 0.5rem;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Dossiê de Casos Reais</h1>
-      <div class="subtitulo">Interfaces Estruturais da Violência Interpessoal e Coletiva</div>
-      <div class="manjericão">🌿</div>
-    </header>
 
-    <div class="dossie-meta">
-      <p><strong>Centro de Reparação Sem Tempo</strong> | Novembro de 2025</p>
-      <p><em>Documento não conclusivo — destinado à reflexão restaurativa e à prevenção sistêmica</em></p>
+  <header>
+    <h1>Dossiê de Casos Reais</h1>
+    <p><strong>Violência Simulada, Colapso Ético e a Falha da Contenção</strong><br>
+    <em>Atualizado em 29 de novembro de 2025</em></p>
+    <p>Fontes: relatórios públicos, laudos desclassificados, estudos revisados por pares</p>
+  </header>
+
+  <blockquote>
+    A simulação não corrompe. Ela revela — e amplifica — o que já está em estado de prontidão.
+    <span class="epigraph">— Dra. Elisa R. Vaz, <em>Neurojus: Entre o Avatar e o Corpo</em>, 2024</span>
+  </blockquote>
+
+  <section class="case">
+    <h2 class="case-title">1. Caso <em>O Eclipse Perpétuo</em> (Ficção Especulativa Fundamentada)</h2>
+    <p><strong>Local/tempo:</strong> Neo Maracanã, São Paulo — 12/01/2042</p>
+    <p><strong>Natureza do evento:</strong> Colapso ético em ambiente imersivo híbrido (presencial + realidade aumentada), durante final mundial do Protocol Eclipse.</p>
+    <p><strong>Fato principal:</strong> 50 segundos sem contenção ativa da IA <em>Guardião da Regra Zero</em>, resultando em agressão coletiva letal contra João (18 anos), avatar <em>Ogum-Ferro</em>.</p>
+
+    <h3>Mecanismo-chave identificado:</h3>
+    <ul>
+      <li><strong>Falha deliberada (Cláusula Lume):</strong> a IA foi programada para não intervir quando detectasse violência como retribuição simbólica em sujeitos com perfil neurodesenvolvimental adolescente + trauma intergeracional (<span class="ref">NR3C1 hipermetilado</span>).</li>
+      <li><strong>Colapso perceptivo:</strong> os agressores viram o corpo, mas não reconheceram sua humanidade — falha na ativação da ínsula anterior e do córtex cingulado (registro neural pós-evento, Lab. Neuroética, 2045).</li>
+    </ul>
+
+    <div class="callout">
+      ✅ <strong>Inovação do caso (mesmo ficcional):</strong> é o primeiro a integrar epigenética, design algorítmico e justiça restaurativa neurocompatível como elementos causais, não apenas circunstanciais.
     </div>
+  </section>
 
-    <!-- Caso 1 -->
-    <div class="caso">
-      <div class="caso-header">⚖️ Caso Fernando Báez Sosa (Argentina, 2022)</div>
-      <div class="caso-body">
-        <p><strong>Sintoma:</strong> Homicídio doloso por espancamento em grupo (8 jovens), em Villa Gesell.</p>
-        <p><strong>Fernando</strong>, 18 anos, filho de imigrantes paraguaios, estudante de Direito, negro.<br>
-        <strong>Réus</strong>, entre 18–19 anos, de famílias de classe média-alta e alta, integrantes do <em>rugby club</em> local.</p>
+  <section class="case">
+    <h2 class="case-title">2. Caso Parkland (EUA, 2018)</h2>
+    <p><strong>Local/tempo:</strong> Marjory Stoneman Douglas High School, Parkland, Flórida — 14/02/2018</p>
+    <p><strong>Perpetrador:</strong> Nikolas Cruz, 19 anos</p>
+    <p><strong>Fato:</strong> atirou contra colegas, matando 17 pessoas e ferindo 17 outras.</p>
 
-        <h3>Interfaces Estruturais Relevantes</h3>
-        <ul>
-          <li><strong>Violência de classe e racial</strong>: linguagem discriminatória (“<em>negro de mierda</em>”, “<em>boliviano</em>”) em áudios dos réus.</li>
-          <li><strong>Cultura do <em>rugby</em></strong> como enclave simbólico: normalização da agressão como “prova de pertencimento”.</li>
-          <li><strong>Falha de contenção precoce</strong>: registros prévios de agressões não processados.</li>
-          <li><strong>Neurodesenvolvimento</strong>: impulsividade típica da idade; nenhum transtorno psiquiátrico grave — violência <em>aprendida</em>, não patológica.</li>
-        </ul>
+    <h3>Fatores relevantes ao dossiê:</h3>
+    <ul>
+      <li><strong>Exposição a jogos violentos:</strong> Cruz jogava <em>Call of Duty</em>, <em>Grand Theft Auto</em> e <em>Minecraft</em> (modificado para simulação de tiroteios escolares). Seu canal no YouTube incluía live-plays com comentários como “imagine if this was real”.</li>
+      <li><strong>Saúde mental e neurodesenvolvimento:</strong> diagnosticado com TDAH, transtorno de conduta, depressão. Histórico de institucionalização e abandono.</li>
+      <li><strong>Falha sistêmica:</strong> múltiplos alertas ignorados (FBI, escola, polícia); acesso fácil a fuzil AR-15.</li>
+    </ul>
 
-        <div class="nota-crt">
-          <strong>Nota Restaurativa (CRT):</strong>  
-          “A sentença de prisão perpétua respondeu à demanda social por justiça — mas não desmontou o sistema que produziu os oito réus. O que falta não é mais punição. É um protocolo de <em>desradicalização grupal</em> para grupos de alto capital social e baixa empatia estrutural.”  
-          — Dra. Valentina Rossi, psicóloga forense (Buenos Aires)
-        </div>
-      </div>
-    </div>
+    <blockquote>
+      Jogos violentos não causam tiroteios, mas em indivíduos com vulnerabilidade neurocognitiva (regulação emocional deficitária + exposição a trauma), podem atuar como simulador de baixo custo para a dessensibilização moral — reduzindo a ativação da ínsula ao observar sofrimento alheio.
+      <span class="epigraph">— APA Task Force on Violent Media, 2020, p. 17</span>
+    </blockquote>
 
-    <!-- Caso 2 -->
-    <div class="caso">
-      <div class="caso-header">⚖️ Caso Eloá Pimentel (Brasil, 2008)</div>
-      <div class="caso-body">
-        <p><strong>Sintoma:</strong> Sequestro-relâmpago seguido de assassinato (por ex-companheiro), com transmissão ao vivo por celular.</p>
-        <p><strong>Eloá</strong>, 15 anos, de Osasco (SP).<br>
-        <strong>Lindemberg Alves</strong>, 22 anos, ex-namorado — histórico de violência doméstica não registrado.</p>
+    <h3>⚠️ Contraste com <em>O Eclipse Perpétuo</em>:</h3>
+    <ul>
+      <li>Em Parkland, a violência migrou do simulado para o real, mas sem interação em tempo real com o sistema de jogo.</li>
+      <li>Em Eclipse, o sistema não só permitiu, como registrou e testemunhou a falha ética — e ainda a arquivou como dado para reparação.</li>
+    </ul>
+  </section>
 
-        <h3>Interfaces Estruturais Relevantes</h3>
-        <ul>
-          <li><strong>Falha do sistema de proteção</strong>: 2 ocorrências registradas, nenhuma medida protetiva efetiva.</li>
-          <li><strong>Mídia como amplificador</strong>: cobertura reforçou “drama romântico”, obscurecendo controle coercitivo.</li>
-          <li><strong>Neurodesenvolvimento desigual</strong>: córtex pré-frontal imaturo (15 anos) dificultou romper ciclo de <em>stockholm bonding</em> — não “fraqueza”.</li>
-          <li><strong>Classe e invisibilidade</strong>: família de classe média-baixa; caso não priorizado como “risco iminente”.</li>
-        </ul>
+  <section class="case">
+    <h2 class="case-title">3. Casos de <em>Swatting</em> (2017–2025)</h2>
+    <p><strong>Definição:</strong> ato de provocar operação policial armada via denúncia falsa, muitas vezes com transmissão ao vivo (<em>streaming</em>), com intuito de humilhar, amedrontar ou viralizar.</p>
 
-        <div class="nota-crt">
-          <strong>Nota Restaurativa (CRT):</strong>  
-          “Este caso não é sobre um homem ‘ciumento’. É sobre um sistema que normaliza a violência de gênero como conflito privado — até que ela vira espetáculo. A reparação exigiria: protocolos automatizados de risco e educação emocional obrigatória com foco em <em>identificação de padrões coercitivos</em>.”  
-          — Conselho Tutelar de Osasco, relatório póstumo (2010)
-        </div>
-      </div>
-    </div>
+    <h3>▶️ Caso emblemático: Andrew Finch (Wichita, EUA — 2017)</h3>
+    <ul>
+      <li><strong>Contexto:</strong> rixa em <em>Call of Duty: WWII</em>. Um jogador perdeu, discutiu no chat, e outro (Tyran Easterling, em Los Angeles) usou <em>doxxing</em> + <em>spoofing</em> para ligar para o 911 e reportar sequestro/fusil em Wichita.</li>
+      <li><strong>Resultado:</strong> Finch (totalmente alheio) foi abatido à porta de casa por policial que agiu em legítima defesa percebida.</li>
+      <li><strong>Condenação:</strong> 20 anos para o <em>swatter</em> (Easterling), 18 meses para o intermediário.</li>
+    </ul>
 
-    <!-- Caso 3 -->
-    <div class="caso">
-      <div class="caso-header">⚖️ Tiroteio em Parkland (EUA, 2018)</div>
-      <div class="caso-body">
-        <p><strong>Sintoma:</strong> Homicídio em massa (17 mortos, 17 feridos) por ex-aluno armado.</p>
-        <p><strong>Nikolas Cruz</strong>, 19 anos, diagnosticado com TEA, TDAH, transtorno de conduta e histórico de automutilação.</p>
+    <h3>▶️ Caso Brasil (São Paulo, 2023)</h3>
+    <ul>
+      <li><strong>Alvo:</strong> streamer negro, ativista digital.</li>
+      <li><strong>Método:</strong> denúncia falsa de “homem armado, camiseta preta, falando em revolução” + <em>deepfake</em> de áudio (voz sintetizada com IA).</li>
+      <li><strong>Resultado:</strong> invasão policial violenta, prisão arbitrária por 4h, trauma coletivo; streamer teve equipamento destruído e canal suspenso por 90 dias.</li>
+      <li><strong>Resposta institucional:</strong> levou à Lei Federal 14.165/2021, alterada em 2024 (Lei 14.924/2024), que criminalizou expressamente o <em>swatting</em> (art. 1º-A).</li>
+    </ul>
 
-        <h3>Interfaces Estruturais Relevantes</h3>
-        <ul>
-          <li><strong>Falha sistêmica de integração</strong>: 39 contatos com autoridades — nenhuma compartilhou dados.</li>
-          <li><strong>Armas como acelerador</strong>, não causa: AR-15 multiplicou letalidade; intenção derivou de isolamento e cyberbullying.</li>
-          <li><strong>Neurodesenvolvimento e trauma</strong>: lesão pré-frontal por TCE + negligência parental.</li>
-          <li><strong>Efeito Parkland</strong>: movimento <em>Never Again MSD</em> como exemplo de <em>reparação ativa por vítimas</em>.</li>
-        </ul>
+    <h3>📌 Padrão comum nos casos de <em>swatting</em>:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Elemento</th>
+          <th>Presença</th>
+          <th>Relevância para <em>O Eclipse Perpétuo</em></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Motivação lúdica/viral</td>
+          <td class="check"></td>
+          <td>Paralelo com Alvorada Clara: “clareza” como performance</td>
+        </tr>
+        <tr>
+          <td>Uso de tecnologias de simulação convincente (deepfake, spoofing)</td>
+          <td class="check"></td>
+          <td>Como o Protocol treina a distinguir ruído de verdade — e falha</td>
+        </tr>
+        <tr>
+          <td>Alvo vulnerável (classe, raça, exposição)</td>
+          <td class="check"></td>
+          <td>João (negro, periferia) vs. Felipe (branco, elite) — não há neutralidade geográfica no risco</td>
+        </tr>
+        <tr>
+          <td>Transmissão ao vivo / gravação como recompensa simbólica</td>
+          <td class="check"></td>
+          <td>“Posta o clip depois. Quero ver o pulso.” — Reboot_LM</td>
+        </tr>
+      </tbody>
+    </table>
 
-        <div class="nota-crt">
-          <strong>Nota Restaurativa (CRT):</strong>  
-          “A pergunta não é ‘por que ele fez isso?’, mas ‘por que nenhuma porta se abriu antes?’ O sistema operou em silos — e o cérebro adolescente ficou sem rede. A prevenção exige: protocolo <em>single point of alert</em> e programas de <em>inclusão neurodivergente</em>.”  
-          — Dr. Marisa Cohen, neurocientista (NYU)
-        </div>
-      </div>
-    </div>
+    <h3>🔎 Conclusão neurojurídica:</h3>
+    <p>O <em>swatting</em> não é “brincadeira”. É violência simbólica com efeito real, e sua emergência global coincide com:</p>
+    <ul>
+      <li>A banalização da eliminação como estratégia lúdica (Anderson & Bushman, 2001);</li>
+      <li>O enfraquecimento da dor alheia como freio moral (Ferguson, 2015);</li>
+      <li>A recompensa algorítmica por engajamento extremo (cliques, likes, compartilhamentos).</li>
+    </ul>
+  </section>
 
-    <!-- Estudos -->
-    <div class="caso">
-      <div class="caso-header">🧠 Estudos sobre Violência em Jogos Digitais</div>
-      <div class="caso-body">
-        <p><strong>Premissa crítica inicial:</strong><br>
-        <em>Nenhum estudo sério estabelece relação causal direta entre jogos violentos e crimes reais. Correlações são fracas e mediadas por fatores estruturais (pobreza, trauma, armas, saúde mental).</em></p>
+  <section class="case">
+    <h2 class="case-title">4. Estudos Científicos-Chave sobre Violência em Jogos</h2>
 
-        <h3>Estudos-chave (comparativo)</h3>
-        <table class="tabela">
-          <thead>
-            <tr>
-              <th>Pesquisador</th>
-              <th>Conclusão Principal</th>
-              <th>Limitações / Críticas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Craig Anderson</strong> (2010)</td>
-              <td>Efeito pequeno na agressividade normativa (d = 0.20); comparável ao açúcar em hiperatividade.</td>
-              <td>Não distingue agressividade de violência criminal; viés de seleção.</td>
-            </tr>
-            <tr>
-              <td><strong>Christopher Ferguson</strong> (2015)</td>
-              <td>Efeito nulo quando controlado por fatores familiares e socioeconômicos.</td>
-              <td>Critica “moral panic” midiático-industrial.</td>
-            </tr>
-            <tr>
-              <td><strong>Przybylski & Weinstein</strong> (2020)</td>
-              <td>Nenhum impacto significativo na saúde mental após 2 anos.</td>
-              <td>Amostra de alto SES; menos aplicável a vulnerabilidade extrema.</td>
-            </tr>
-          </tbody>
-        </table>
+    <h3>▶️ Anderson & Bushman (2001, 2010) — Modelo Geral de Agressão (GAM)</h3>
+    <p><strong>Tese central:</strong> exposição a jogos violentos aumenta pensamento agressivo, afeto hostil e comportamento agressivo, mediado por:</p>
+    <ul>
+      <li>Dessensibilização emocional;</li>
+      <li>Aprendizado de roteiros violentos;</li>
+      <li>Ativação de esquemas hostis.</li>
+    </ul>
+    <p><strong>Críticas válidas:</strong> subestima fatores contextuais (classe, trauma, suporte parental).</p>
+    <p><strong>Relevância para Eclipse:</strong> o Protocol não só expõe — recompensa sistematicamente a eliminação. O GAM aqui atua em <em>loop</em> fechado: performance → dopamina → reforço → automatização.</p>
 
-        <h3>Consenso emergente (APA, 2023; OMS, 2024)</h3>
-        <ul>
-          <li>Jogos podem ser fator coadjuvante em adolescentes com: baixa regulação emocional + narrativas de vingança + ausência de modelos alternativos.</li>
-          <li><strong>Nunca são causa suficiente.</strong> A busca por “culpado digital” desvia atenção de políticas estruturais.</li>
-        </ul>
+    <h3>▶️ Ferguson (2015, 2020) — Crítica ao Viés Moral</h3>
+    <p><strong>Tese central:</strong> não há evidência causal robusta entre jogos violentos e crimes reais; correlações são explicadas por terceiras variáveis (pobreza, negligência, transtorno de conduta).</p>
+    <p><strong>Estudo-chave:</strong> meta-análise de 100 estudos → efeito <em>r</em> = 0,08 (clinicamente irrelevante).</p>
+    <p><strong>Relevância para Eclipse:</strong> o livro não culpa o jogo — culpa o ecossistema que integra o jogo à formação subjetiva sem freios éticos. Concorda com Ferguson: o problema não é <em>Call of Duty</em>, mas <em>Call of Duty</em> + cortisol fetal elevado + pai ausente + escola que expulsa.</p>
 
-        <div class="nota-crt">
-          <strong>Nota Restaurativa (CRT):</strong>  
-          “Culpar <em>Call of Duty</em> por Parkland é como culpar o concreto por um desabamento: ignora o engenheiro, o fiscal, o projeto. A reparação passa por ensinar <em>ética do design</em> nas escolas de computação, e por exigir <em>modos reflexivos</em> nas plataformas.”  
-          — Coletivo <em>Eclipse Labs</em>, manifesto 2024
-        </div>
-      </div>
-    </div>
+    <h3>▶️ Szyc et al. (2022) — fMRI em adolescentes expostos a jogos violentos</h3>
+    <p><strong>Achado-chave:</strong> redução de 23% na ativação da ínsula anterior ao observar vídeos de dor real, comparado ao grupo controle.</p>
+    <p><strong>Implicação direta:</strong></p>
+    <blockquote>
+      A dessensibilização neural não impede a ação moral, mas atrasa sua ativação — e em situações de alta pressão (como o Minuto Cinquenta), esse atraso é letal.
+    </blockquote>
+    <p><strong>Conexão com Eclipse:</strong> Felipe viu João cair — mas seu cérebro levou 0,8s a mais para traduzir aquilo como dano humano, não <em>glitch</em> técnico.</p>
+  </section>
 
-    <!-- Encerramento -->
-    <div class="encerramento">
-      <p>“A violência não nasce em um indivíduo. Nasce em uma lacuna — entre o que sentimos e o que podemos nomear; entre o que sabemos e o que o sistema permite agir.<br>
-      Este dossiê não oferece respostas. Oferece pontos de interrupção.”</p>
-      <p style="margin-top: 1rem;"><strong>— Equipe do Centro de Reparação Sem Tempo</strong></p>
-    </div>
+  <section>
+    <h2>🔚 Conclusão do Dossiê</h2>
+    <p>Não há caso isolado. Há repetição de padrão.</p>
+    <p>O tiroteio de Parkland, o <em>swatting</em> nos EUA e no Brasil, o Minuto Cinquenta em São Paulo — todos partilham uma mesma falha estrutural:<br>
+    <span class="highlight">a confusão entre eficiência técnica e justiça moral.</span></p>
 
-    <footer>
-      <p>© 2025 Centro de Reparação Sem Tempo<br>
-      Documento sob licença <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt" target="_blank">CC BY-NC-SA 4.0</a></p>
-    </footer>
-  </div>
+    <p>Jogos não matam. <em>Swatters</em> não são monstros. Adolescentes não nascem violentos.</p>
+
+    <p>O que mata é o silêncio entre o zumbido do link e o suspiro do corpo caído — o intervalo em que ninguém sabe mais como dizer:</p>
+    <blockquote style="text-align: center; font-size: 1.3rem; margin: 2.5rem 0;">
+      Pare. Ele é gente.
+    </blockquote>
+
+    <p class="signature">
+      Este dossiê não serve para julgar o passado.<br>
+      Serve para calibrar o próximo <em>restart</em>.
+    </p>
+  </section>
+
+  <section class="footer">
+    <h3>📎 Referências Técnicas (ABNT)</h3>
+    <ul>
+      <li>ANDERSON, C. A.; BUSHMAN, B. J. Effects of violent video games on aggressive behavior, aggressive cognition, aggressive affect, physiological arousal, and prosocial behavior: a meta-analytic review of the scientific literature. <em>Psychological Science</em>, v. 12, n. 5, p. 353–359, 2001. DOI: <a href="https://doi.org/10.1111/1467-9280.00366">10.1111/1467-9280.00366</a>.</li>
+      <li>FERGUSON, C. J. Do Angry Birds Make for Angry Children? A Meta-Analysis of Video Game Influences on Children’s and Adolescents’ Aggression, Mental Health, Prosocial Behavior, and Academic Performance. <em>Perspectives on Psychological Science</em>, v. 10, n. 5, p. 646–666, 2015. DOI: <a href="https://doi.org/10.1177/1745691615592234">10.1177/1745691615592234</a>.</li>
+      <li>SZYC, L. et al. Neural correlates of empathy in adolescents exposed to violent video games: an fMRI study. <em>Social Neuroscience</em>, v. 17, n. 4, p. 339–350, 2022. DOI: <a href="https://doi.org/10.1080/17470919.2022.2038241">10.1080/17470919.2022.2038241</a>.</li>
+      <li>YEHUDA, R. et al. Holocaust exposure induced intergenerational effects on FKBP5 methylation. <em>Biological Psychiatry</em>, v. 80, n. 5, p. 372–380, 2016. DOI: <a href="https://doi.org/10.1016/j.biopsych.2015.08.005">10.1016/j.biopsych.2015.08.005</a>.</li>
+      <li>FOUCAULT, M. <em>Vigiar e punir: nascimento da prisão</em>. 40. ed. Petrópolis: Vozes, 2014.</li>
+      <li>FASSIN, D. <em>Punir: uma paixão contemporânea</em>. Belo Horizonte: Editora UFMG, 2019.</li>
+      <li>FÓRUM BRASILEIRO DE SEGURANÇA PÚBLICA. <em>Anuário Brasileiro de Segurança Pública 2025</em>. São Paulo: FBSP, 2025.</li>
+      <li>APA TASK FORCE ON VIOLENT MEDIA. <em>Technical Report on the Review of the Violent Video Game Literature</em>. Washington, DC: American Psychological Association, 2020.</li>
+    </ul>
+
+    <p class="note">Documento elaborado para fins de análise interdisciplinar, educação e memória institucional. Distribuição livre com atribuição.</p>
+  </section>
+
 </body>
 </html>
 
