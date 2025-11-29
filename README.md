@@ -1,94 +1,100 @@
-# 🌿 Dossiê de Casos Reais  
-*Análise interdisciplinar para justiça reparativa e prevenção sistêmica*  
-**Centro de Reparação Sem Tempo | Chapecó, SC | Novembro de 2025**
-
-Este repositório contém o **Dossiê de Casos Reais**, documento crítico produzido como recurso para:
-- Profissionais do Direito, Psicologia e Saúde Pública  
-- Educadores em justiça restaurativa e neuroeducação  
-- Leitores de *O Eclipse Perpétuo* (como material complementar ético)
+# 📁 Dossiê de Casos Reais  
+### _Violência Simulada, Colapso Ético e a Falha da Contenção_  
+> **Atualizado em 29 de novembro de 2025**  
+> _Ficção fundamentada + estudos empíricos + neuroética aplicada_
 
 ---
 
-## 📚 Conteúdo
-
-O dossiê analisa quatro eixos interligados:
-1. **Caso Fernando Báez Sosa** (Argentina, 2022) — violência de classe e pertencimento grupal  
-2. **Caso Eloá Pimentel** (Brasil, 2008) — falha sistêmica de proteção à adolescente  
-3. **Tiroteio de Parkland** (EUA, 2018) — fragmentação institucional e neurodesenvolvimento  
-4. **Estudos sobre violência em jogos** — revisão crítica de Anderson, Ferguson e Przybylski
-
-Todos os casos são lidos sob a lente da **justiça neurocompatível**:  
-> *Não se trata de “desculpar”, mas de “entender para interromper”.*
+🌍 **Acesso público**: [https://seu-usuario.github.io/dossie-casos-reais](https://seu-usuario.github.io/dossie-casos-reais)  
+*(Substitua `seu-usuario` pelo seu nome de usuário no GitHub após ativar o GitHub Pages.)*
 
 ---
 
-## 🛠️ Estrutura do Repositório
+## 📌 Sobre este documento
 
-```
-├── index.html                 # Página principal (autocontida, sem dependências)
-├── README.md                  # Este arquivo
-└── /assets/ (opcional)       # Futuros recursos: áudios, versão PDF, cards para redes
-```
+Este dossiê reúne quatro casos — três reais (Parkland, swatting nos EUA e Brasil) e um especulativo fundamentado (*O Eclipse Perpétuo*) — com o objetivo de mapear **a convergência entre simulação digital, vulnerabilidade neurodesenvolvimental e falha institucional de contenção ética**.
 
----
+Não se trata de uma acusação aos jogos, às tecnologias ou aos jovens. Trata-se de um **alerta estrutural**:  
+> _Quando o design recompensa a eficiência da eliminação, mas desativa a percepção da humanidade do outro, o colapso não é acidente — é feature._
 
-## 🎨 Design e Acessibilidade
+A narrativa integra:
+- ✅ Dados forenses e laudos desclassificados  
+- ✅ Estudos de neuroimagem (fMRI, epigenética NR3C1/FKBP5)  
+- ✅ Análise crítica de políticas públicas (Lei 14.924/2024)  
+- ✅ Ferramentas conceituais da justiça restaurativa neurocompatível  
+- ✅ Ficção especulativa como método de antecipação ética (*design fiction*)
 
-- **Cores**:  
-  - `#3b82f6` (azul CRT) → autoridade ética  
-  - `#10b981` (verde reparação) → esperança ativa  
-  - `#1a1f28` (cinza-escuro) → seriedade forense  
-- **Tipografia**:  
-  - `Spectral` (corpo) — legível, humanista  
-  - `IBM Plex Mono` (títulos) — interface técnica, sem frieza  
-- **Acessibilidade**:  
-  - Contraste WCAG AA em todos os elementos  
-  - Sem animações distrativas  
-  - HTML semântico (`<header>`, `<section>`, `<table>` com `<th>`)
-
-✅ **Testado em**: Chrome, Firefox, Safari, Edge (desktop e mobile)
+Este é um **documento vivo** — aberto a atualizações, revisões e contribuições interdisciplinares.
 
 ---
 
-## 🌐 Como Hospedar
+## 🧩 Estrutura
 
-1. **GitHub Pages** (recomendado):  
-   - Suba `index.html` para a branch `main`  
-   - Em *Settings > Pages*, selecione branch `main`  
-   - URL: `https://<seu-usuario>.github.io/dossie-casos-reais/`
-
-2. **Netlify / Vercel**:  
-   - Faça upload da pasta  
-   - Nenhum build necessário (HTML estático)
-
----
-
-## 📝 Licença e Uso
-
-- **Licença**: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt)  
-  - ✅ Permitido: compartilhar, adaptar, usar em educação  
-  - ❌ Proibido: uso comercial sem autorização  
-  - ℹ️ Crédito obrigatório: *Centro de Reparação Sem Tempo / José Erigutemberg Meneses de Lima*
-
-> Este documento é vivo. Sugestões de atualização:  
-> erigutemberg.crpst@proton.me
+| Seção | Conteúdo |
+|-------|----------|
+| **1. O Eclipse Perpétuo** | Caso especulativo (São Paulo, 2042): colapso em ambiente imersivo híbrido. Primeiro caso a integrar *epigenética + algoritmo + reparação neural*. |
+| **2. Parkland (2018)** | Análise neurocognitiva do tiroteio escolar à luz da dessensibilização moral e falha sistêmica. |
+| **3. Swatting (2017–2025)** | Dox, deepfake e performance viral: por que a “brincadeira” mata — e como raça e classe modulam o risco. |
+| **4. Estudos Científicos-Chave** | GAM, críticas de Ferguson, fMRI de Szyc et al.: o que diz (e o que omite) a ciência sobre violência simulada. |
+| **Conclusão** | “Pare. Ele é gente.” — uma proposta de *ética da latência*: o intervalo que decide entre glitch e luto. |
 
 ---
 
-## 📖 Contexto Conceitual
+## 🧠 Pressupostos metodológicos
 
-O dossiê materializa os princípios do **Centro de Reparação Sem Tempo**:  
-- Justiça como **processo**, não como **evento**  
-- Violência como **falha sistêmica**, não como **exceção individual**  
-- Adolescência como **janela plástica**, não como **patologia**
+Este dossiê opera com três princípios orientadores:
 
-> *“A verdade não está no final — está na distância entre as camadas.”*  
-> — José Erigutemberg, *O Eclipse Perpétuo*
+1. **A neurociência não determina, mas modula**  
+   Trauma intergeracional (ex.: metilação do gene NR3C1) não *causa* violência — mas altera a janela de resposta moral sob pressão.
 
----
-© 2025 Centro de Reparação Sem Tempo  
-Chapecó, Santa Catarina — Brasil  
-```
+2. **A simulação não substitui, mas treina**  
+   Jogos e protocolos imersivos são *ecossistemas de aprendizagem*. O que reforçam? Precisão — ou empatia?
+
+3. **A justiça não se mede em punição, mas em transformação**  
+   Concordamos com Didier Fassin (2019): “punir é ritual; reparar é política”. A *reparação neurocompatível* (MPP em *Eclipse*) é aqui proposta como experimento ético.
 
 ---
 
+## 🔍 Como usar este material
+
+- ✅ **Docentes e pesquisadores**: livre para uso em aulas de Direito, Psicologia, Neuroética, Comunicação e Game Studies (com atribuição).
+- ✅ **Desenvolvedores de IA e jogos**: como *checklist de contenção ética* — especialmente na seção *Cláusula Lume*.
+- ✅ **Defensores de direitos humanos**: base para incidência em políticas públicas contra violência digital algorítmica.
+- ✅ **Escritores e narradores**: modelo de *ficção fundamentada* — onde o especulativo serve ao real.
+
+> 📜 Licença: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
+> *Você pode compartilhar, adaptar e remixar — desde que cite a autoria, não use com fins comerciais e distribua suas contribuições sob a mesma licença.*
+
+---
+
+## 🤝 Contribuições
+
+Este dossiê é um *documento colaborativo por design*. Aceitamos:
+- Adição de novos casos (reais ou especulativos, com fontes)
+- Reanálises à luz de novos estudos (ex.: avanços em neurofeedback em adolescentes)
+- Traduções (inglês, espanhol)
+- Sugestões de acessibilidade (leitor de tela, contraste, versão em áudio)
+
+**Como contribuir:**  
+1. Abra uma *Issue* descrevendo sua sugestão.  
+2. Ou faça um *Pull Request* com alterações no `index.html`.  
+3. Use as *Labels*: `adicional-de-caso`, `revisão-científica`, `acessibilidade`, `tradução`.
+
+> 🎯 *Prioridade 2026*: expandir a seção de **justiça restaurativa neurocompatível** com protocolos práticos (ex.: sessões de VR com ativação da ínsula via biofeedback).
+
+---
+
+## 📚 Referências-chave (seleção)
+
+- Yehuda, R. et al. (2016). *Holocaust exposure induced intergenerational effects on FKBP5 methylation*. Biological Psychiatry.  
+- Szyc, L. et al. (2022). *Neural correlates of empathy in adolescents exposed to violent video games*. Social Neuroscience.  
+- APA Task Force (2020). *Technical Report on Violent Media*.  
+- Fassin, D. (2019). *Punir: uma paixão contemporânea*.  
+- Lei Federal nº 14.924/2024 (Brasil) — criminalização do *swatting*.
+
+➡️ [Veja todas as referências no documento final](https://seu-usuario.github.io/dossie-casos-reais#refer%C3%AAncias-t%C3%A9cnicas-abnt)
+
+---
+
+> _“O próximo restart não será técnico. Será ético.”_  
+> — Equipe de Neuroética Aplicada | Novembro de 2025
